@@ -19,12 +19,10 @@ define([
       },
 
       addToList: function(model) {
-        this.$el.append("<li>" + model.get("name") + "</li>");
+         this.$el.append(model.view.$el);
       },
       
-      render: function() {
-            
-      }
+      render: function() {}
 
     });
 
