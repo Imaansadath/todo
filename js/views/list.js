@@ -7,7 +7,7 @@ define([
 
       tagName: "ul",
 
-      className: "todo-items",
+      className: "list-group",
 
       events: {
 

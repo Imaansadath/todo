@@ -19,16 +19,32 @@ define([
             name: "Print certificate"
         }]);
 
-        $("button").on("click",function(){
+        $("#editor .submit").on("click",function(){
+            var val = $("#editor textarea").val();
+            var model = $("#editor textarea").data("model");
+            model.set("name", val);
+            $("#editor").hide();
+        });
+
+        $("#editor .cancel").on("click", function() {
+            $("#editor").hide();
+        });
+
+        $("#clear").on("click",function(){
+            list.collection.reset(); 
+        });
+
+        $("form" ).on("submit", function(e){
+            e.preventDefault();
             var val=$("input").val();
-            if(val)
-            {
+            if(val) {
                 list.collection.add({
                     name: val
                 });
+                $("input").val(" ");
             }
         });
-        
-    });
+
+  });
 
 });

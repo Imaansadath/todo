@@ -1,11 +1,33 @@
 <html>
+from django.contrib.auth.models import User
     <head>
         <title>Todo app</title>
         <script type="text/javascript" src="js/lib/require.js" data-main="js/main"></script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all">
+         <link rel="stylesheet" type="text/css" href="css/main.css" media="all">
     </head>
     <body>
+
         <h1>Todo App</h1>
-        <input type="text" /><button>add</button>
-        <div id="content"></div>
+
+        <form>
+            <input type="text" />
+            <button id="add" class="btn btn-primary-outline btn-sm ">Add</button>
+            <button id="clear" class="btn btn-primary-outline btn-sm ">Clear</button>
+         </form>
+
+        <div id="content" >
+            <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <div id="editor" style="display: none;">
+            <textarea type="hidden" rows="4" cols="50"></textarea>
+            <button type="button" class="submit">Submit</button>
+            <button type="button" class="cancel">Cancel</button>
+        </div>
+
     </body>
 </html>
