@@ -1,6 +1,7 @@
 
 define([
-    "../collections/todo"
+    "../collections/todo",
+    "datepicker"
 ], function(TodoCollection) {
     
     return Backbone.View.extend({
@@ -16,6 +17,10 @@ define([
       initialize: function() {
         this.collection = new TodoCollection();
         this.collection.on("add", this.addToList, this);
+            $('#date').datetimepicker({
+                inline :true
+            });
+
       },
 
       addToList: function(model) {

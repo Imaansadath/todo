@@ -1,9 +1,12 @@
 <html>
     <head>
         <title>Todo app</title>
+          
         <script type="text/javascript" src="js/lib/require.js" data-main="js/main"></script>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all">
-         <link rel="stylesheet" type="text/css" href="css/main.css" media="all">
+        <link rel="stylesheet" type="text/css" href="css/main.css" media="all">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css" media="all">
+
     </head>
     <body>
 
@@ -27,6 +30,12 @@
             <button type="button" class="submit">Submit</button>
             <button type="button" class="cancel">Cancel</button>
         </div>
+        
+        <div id="date-container" style="display: none;">
+            <input type='text' class="form-control" id='date' /> 
+            <button type="button" class="submit">Submit</button>
+            <button type="button" class="cancel">Cancel</button>
+         </div>
 
     </body>
 </html>

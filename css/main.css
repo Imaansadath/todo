@@ -1,4 +1,4 @@
-span.remove {
+span.glyphicon {
     cursor: pointer;
 }
 
@@ -8,10 +8,29 @@ span.remove {
    
 }
 
-
 body {
-        background: url(/home/eiman/projects/todo/images/Symbol_list_class.svg);
-        -webkit-background-size: cover;
-        background-color: #f5f5f5;
-        opacity: 0.5;
+      
+        text-align:center;
+        width:60%;
+        padding-left:500px;
+       
+}
+h1 {
+    color:black;
+}
+
+button{
+    color:black;
+}
+
+#editor{
+    color:black;
+}
+
+#date-container {
+   position: relative;
+}
+
+ul li{
+    color:white;
 }

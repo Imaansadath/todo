@@ -30,8 +30,18 @@ define([
             $("#editor").hide();
         });
 
+        $("#date-container .cancel").on("click", function() {
+            $("#date-container").hide();
+        });
+
         $("#clear").on("click",function(){
             list.collection.reset(); 
+        });
+        $("#date-container .submit").on("click",function(){
+            var date = $("#date-container input").val();
+            var model = $("#date-container input").data("model");
+            model.set("date", date);
+            $("#date-container").hide();
         });
 
         $("form" ).on("submit", function(e){
@@ -44,7 +54,7 @@ define([
                 $("input").val(" ");
             }
         });
-
+        
   });
 
 });
